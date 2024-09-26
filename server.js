@@ -42,3 +42,55 @@ app.use('/api', commentRoutes );
 app.listen(port, () =>
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`)
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const path = require('path');
+// const express = require('express');
+// const cors = require('cors');
+// const cookieParser = require('cookie-parser');
+// const blogRoutes = require('../routes/blogRoutes'); // Adjust the path
+// const userRoutes = require('../routes/userRoutes'); // Adjust the path
+// const commentRoutes = require('../routes/commentRoutes'); // Adjust the path
+// const connectDB = require('../config/db'); // Adjust the path
+// const serverless = require('serverless-http');
+
+// const dotenv = require('dotenv');
+// dotenv.config();
+
+// const app = express();
+
+// // Connect to your database
+// connectDB();
+
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+// app.use(cookieParser());
+// app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serve uploaded files
+
+// app.get('/', (req, res) => {
+//   res.send('API is running....');
+// });
+
+// // Use routes
+// app.use('/api', blogRoutes);
+// app.use('/api/users', userRoutes);
+// app.use('/api', commentRoutes);
+
+// module.exports = app; // Export the app
+// module.exports.handler = serverless(app); // Export the serverless handler
