@@ -19,9 +19,7 @@ connectDB(); // Call the connectDB function
 const app = express();
 
 app.use(cors({
-    origin: 'https://blog-frontend-fru8ordjd-shahzad572as-projects.vercel.app', // Allow requests from this origin
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
-    credentials: true, // Allow credentials
+    
   }));
 
 
