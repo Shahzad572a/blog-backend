@@ -18,9 +18,19 @@ connectDB(); // Call the connectDB function
 
 const app = express();
 
-app.use(cors({
+// Dynamic CORS middleware
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
     
-  }));
+    // Allow all origins (or implement your own logic)
+    callback(null, true); // Change to false to deny all origins
+  },
+  credentials: true, // Allow credentials
+};
+
+app.use(cors(corsOptions));
 
 
 app.use(express.json());
