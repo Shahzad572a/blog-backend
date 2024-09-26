@@ -19,7 +19,7 @@ connectDB(); // Call the connectDB function
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow requests from this origin
+    origin: 'https://blog-frontend-azure-five.vercel.app', // Allow requests from this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     credentials: true, // Allow credentials
   }));
