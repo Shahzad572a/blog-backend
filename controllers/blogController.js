@@ -5,7 +5,7 @@ const Blog = require('../models/Blog');
 
 const createBlog = async (req, res) => {
   const { title, description, category, tags,  } = req.body;
-  const image = req.file ? `/uploads/${req.file.filename}` : null;
+  const image = req.file ? req.file.path : null; 
 
   try {
      
@@ -76,7 +76,7 @@ const getMyBlogs = async (req, res) => {
 const updateBlog = async (req, res) => {
   const { id } = req.params;
   const { title, description, category, tags } = req.body;
-  const image = req.file ? `/uploads/${req.file.filename}` : null;
+  const image = req.file ? req.file.path : null; 
 
   try {
     const updatedBlog = await Blog.findByIdAndUpdate(
