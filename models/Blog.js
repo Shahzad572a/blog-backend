@@ -21,8 +21,14 @@ const blogSchema = new mongoose.Schema({
     required: false,
   },
   image: {
-    type: String, // URL or path to the image
-    required: false,
+    public_id:{
+      type: String,  
+      required: false,
+    },
+    url:{
+      type: String,  
+       required: false,
+    }
   },
   createdAt: {
     type: Date,

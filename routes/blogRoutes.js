@@ -23,14 +23,14 @@ router.get('/blogs', getBlogs);
 
 router.delete('/blogs/:id', protect,deleteBlog);
 
-router.put('/blogs/:id', upload.single('image') ,protect,updateBlog);
+router.put('/blogs/:id' ,upload.single('image'),protect,updateBlog);
 
 
 
 router.get('/myblogs',protect, getMyBlogs, );
 
 // Route to create a new blog
-router.post('/blogs', upload.single('image'), protect,createBlog);
+router.post('/blogs', upload.single('image'),  protect,createBlog);
 
 // API to get a single blog by ID
 router.get('/blogs/:id', getBlogById);
